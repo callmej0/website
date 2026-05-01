@@ -1,178 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wedding Invitation</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Wedding Invitation</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      background: #fbf7f4;
-      color: #333;
-      text-align: center;
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: "Georgia", serif;
+    background: linear-gradient(to bottom, #fff3eb, #fdeee6);
+    color: #3b2f2f;
+    text-align: center;
+  }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 50px 20px;
-    }
+  .container {
+    max-width: 850px;
+    margin: auto;
+    padding: 60px 20px;
+  }
 
-    h1 {
-      font-size: 42px;
-      font-weight: 400;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
+  .small-title {
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #8a6b6b;
+    margin-bottom: 20px;
+  }
 
-    .names {
-      font-size: 26px;
-      margin-bottom: 25px;
-      color: #555;
-    }
+  .names {
+    font-size: 64px;
+    font-weight: 500;
+    margin: 10px 0;
+  }
 
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 25px;
-      margin: 18px 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    }
+  .weds {
+    font-style: italic;
+    font-size: 28px;
+    color: #b65b5b;
+  }
 
-    .date-box {
-      display: inline-block;
-      padding: 15px 20px;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      margin-top: 10px;
-    }
+  .subtitle {
+    margin-top: 25px;
+    font-size: 16px;
+    color: #6b5a5a;
+    line-height: 1.6;
+  }
 
-    .month {
-      font-size: 14px;
-      letter-spacing: 2px;
-      color: #888;
-    }
+  .section {
+    margin-top: 60px;
+  }
 
-    .day {
-      font-size: 34px;
-      font-weight: bold;
-      margin: 5px 0;
-    }
+  .card {
+    background: rgba(255,255,255,0.7);
+    border-radius: 18px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
 
-    .year {
-      font-size: 14px;
-      color: #888;
-    }
+  .date {
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
 
-    iframe {
-      width: 100%;
-      height: 280px;
-      border: 0;
-      border-radius: 10px;
-    }
+  /* calendar style */
+  .calendar {
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid #e0cfc7;
+    margin-top: 20px;
+  }
 
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 24px;
-      background: #b86b77;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
+  .month {
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #a07a7a;
+  }
 
-    .btn:hover {
-      background: #9e5662;
-    }
+  .day {
+    font-size: 40px;
+    font-weight: bold;
+  }
 
-    .countdown {
-      font-size: 20px;
-      color: #444;
-      margin-top: 10px;
-    }
+  .year {
+    font-size: 14px;
+    color: #a07a7a;
+  }
 
-    .footer {
-      margin-top: 35px;
-      font-size: 14px;
-      color: #888;
-    }
-  </style>
+  iframe {
+    width: 100%;
+    height: 280px;
+    border: none;
+    border-radius: 14px;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    border-radius: 10px;
+    background: #b65b5b;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #9e4d4d;
+  }
+
+  .countdown {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #4a3b3b;
+  }
+
+  .footer {
+    margin-top: 70px;
+    font-style: italic;
+    color: #7a6464;
+  }
+</style>
 </head>
 
 <body>
-  <div class="container">
 
-    <h1>You're Invited</h1>
+<div class="container">
 
-    <div class="names">
-      <strong>Takkudu</strong> & <strong>Kuttappi</strong>
-    </div>
+  <!-- HEADER -->
+  <div class="small-title">TOGETHER WITH THEIR FAMILIES</div>
 
-    <!-- COUNTDOWN -->
-    <div class="card">
-      <h3>Countdown to the Big Day</h3>
-      <div class="countdown" id="countdown"></div>
-    </div>
+  <div class="names">Kuttappi</div>
+  <div class="weds">weds</div>
+  <div class="names">Takkudu</div>
 
-    <!-- DATE / CALENDAR -->
-    <div class="card">
-      <h3>Wedding Date</h3>
-      <div class="date-box">
-        <div class="month">JULY</div>
-        <div class="day">12</div>
-        <div class="year">2026</div>
-      </div>
-    </div>
-
-    <!-- LOCATION -->
-    <div class="card">
-      <h3>Location</h3>
-      <p>Wedding Venue</p>
-
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4044.8853306144374!2d76.37364157512282!3d10.158554170286203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08061b468975ab%3A0xdeeba8a7f2436d7d!2sCIAL%20TRADE%20FAIR%20%26%20EXHIBITION%20CENTRE!5e1!3m2!1sen!2sde!4v1777665763693!5m2!1sen!2sde"
-        loading="lazy">
-      </iframe>
-    </div>
-
-    <!-- RSVP -->
-    <div class="card">
-      <h3>RSVP</h3>
-      <p>Please let us know if you will join us</p>
-
-      <a class="btn" href="YOUR_GOOGLE_FORM_LINK" target="_blank">
-        Respond to RSVP
-      </a>
-    </div>
-
-    <div class="footer">
-      We can’t wait to celebrate with you ❤️
-    </div>
-
+  <div class="subtitle">
+    Request the honour of your presence as they begin their forever,<br/>
+    surrounded by love, family and friends.
   </div>
 
-  <script>
-    const weddingDate = new Date("2026-07-12T00:00:00").getTime();
+  <!-- COUNTDOWN -->
+  <div class="section card">
+    <h3>Countdown to the Big Day</h3>
+    <div class="countdown" id="countdown"></div>
+  </div>
 
-    const x = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
+  <!-- DATE -->
+  <div class="section card">
+    <h3>Save the Date</h3>
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    <div class="calendar">
+      <div class="month">NOVEMBER</div>
+      <div class="day">21</div>
+      <div class="year">2026</div>
+    </div>
 
-      document.getElementById("countdown").innerHTML =
-        days + " days " + hours + " hrs " + minutes + " min";
+    <div class="date">Saturday, November 21, 2026</div>
+  </div>
 
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "Today is the day ❤️";
-      }
-    }, 1000);
-  </script>
+  <!-- VENUE -->
+  <div class="section card">
+    <h3>The Venue</h3>
+    <h2>The Grand Pavilion</h2>
+    <p>123 Rose Garden Avenue<br/>Mumbai, India</p>
+
+    <!-- Google Maps embed -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=YOUR_EMBED_LINK"
+      loading="lazy">
+    </iframe>
+
+    <a class="btn" href="https://maps.google.com" target="_blank">
+      Open in Google Maps
+    </a>
+  </div>
+
+  <!-- RSVP -->
+  <div class="section card">
+    <h3>KINDLY RSVP</h3>
+    <p>Will you join us?</p>
+
+    <a class="btn" href="YOUR_GOOGLE_FORM_LINK" target="_blank">
+      Respond via Google Form
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    With love, ABC & DEF
+  </div>
+
+</div>
+
+<script>
+  const weddingDate = new Date("2026-11-21T00:00:00").getTime();
+
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+
+    document.getElementById("countdown").innerHTML =
+      `${days} days ${hours} hrs ${minutes} min`;
+
+    if (diff < 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "Today is the day ❤️";
+    }
+  }, 1000);
+</script>
+
 </body>
 </html>
